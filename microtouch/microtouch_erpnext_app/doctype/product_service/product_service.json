@@ -36,7 +36,7 @@
   "resolved_by_engineer",
   "section_break_sguw",
   "resolution_details",
-  "spare_parts_details",
+  "costing_table",
   "section_break_t1st",
   "min_service_charge",
   "discount",
@@ -267,13 +267,6 @@
    "precision": "0"
   },
   {
-   "columns": 4,
-   "fieldname": "spare_parts_details",
-   "fieldtype": "Table",
-   "label": "Spare Parts Details",
-   "options": "Spares Parts"
-  },
-  {
    "fieldname": "spare_part_total",
    "fieldtype": "Currency",
    "label": "Spare Part Total"
@@ -299,11 +292,18 @@
    "fieldname": "complaint_id",
    "fieldtype": "Data",
    "label": "Complaint ID"
+  },
+  {
+   "columns": 5,
+   "fieldname": "costing_table",
+   "fieldtype": "Table",
+   "label": "Costing Table",
+   "options": "Spares Parts"
   }
  ],
  "icon": "fa fa-bug",
  "links": [],
- "modified": "2024-01-01 11:34:16.592671",
+ "modified": "2024-01-02 18:00:43.490003",
  "modified_by": "Administrator",
  "module": "MicroTouch-ERPNext-App",
  "name": "Product Service",
