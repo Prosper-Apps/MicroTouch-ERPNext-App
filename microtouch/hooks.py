@@ -128,7 +128,12 @@ fixtures = [
     },
     {
         "dt": "Client Script", "filters": [["dt", "=", "Lead"]]
+    },
+    {
+        'dt': 'Custom Field',
+        'filters':[['dt', '=','Lead']]
     }
+
 ]
 
 # Document Events
