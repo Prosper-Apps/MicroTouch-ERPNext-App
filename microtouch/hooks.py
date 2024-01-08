@@ -121,7 +121,12 @@ fixtures = [
     {
         'dt':'Property Setter',
         'filters':[['doc_type','=','Item']]
-    }
+    },
+    {
+        'dt': 'Property Setter',
+        'filters':[['doc_type','=','Lead']]
+    },
+    {"dt": "Client Script", "filters": [["dt", "=", "Lead"]]}
 ]
 
 # Document Events

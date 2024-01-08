@@ -14,7 +14,7 @@
   "mobile_no",
   "customer_display",
   "col_break4",
-  "customer_group",
+  "contact_person",
   "contact_email",
   "status",
   "engineer_to_be_assigned",
@@ -42,7 +42,9 @@
   "discount",
   "column_break_mrtc",
   "spare_part_total",
-  "total_charges"
+  "total_charges",
+  "_section",
+  "terms_and_conditions"
  ],
  "fields": [
   {
@@ -110,15 +112,6 @@
    "fieldtype": "Data",
    "label": "Contact Email",
    "options": "Email"
-  },
-  {
-   "fetch_from": "customer_name.customer_group",
-   "fetch_if_empty": 1,
-   "fieldname": "customer_group",
-   "fieldtype": "Link",
-   "label": "Customer Group",
-   "options": "Customer Group",
-   "print_hide": 1
   },
   {
    "fieldname": "col_break4",
@@ -299,11 +292,30 @@
    "fieldtype": "Table",
    "label": "Costing Table",
    "options": "Spares Parts"
+  },
+  {
+   "fetch_from": ".email_id",
+   "fieldname": "contact_person",
+   "fieldtype": "Data",
+   "label": "Contact Person"
+  },
+  {
+   "fieldname": "_section",
+   "fieldtype": "Section Break",
+   "label": " "
+  },
+  {
+   "default": "Repair charges listed are only service charges. Cost of the components replaced will be extra.\nIf components cost exceeds service charges that means, total including components cost exceeding double the service charges of the respective item, then only we can give you the estimate for your approval. Otherwise equipment will be repaired. The estimate is approximate and the actual repair charges may differ from the estimate.\nIf estimate is not approved, customer has to pay 100% service charges. If not repaired because of the non availability of parts or any other reason we won't charge.\nWe will show you the functionality of the repaired items in our office while you taking back, for your satisfaction.\nOnce delivered the Material after repairs will not carry any warranty on parts and service\nDefective parts are not preserved after repairs, hence these will not be returned to customer.\nPayment should be made against the delivery of the Material.\nThe original receipt must be produced while taking delivery of the equipment. Delivery may be refused if original receipt is not presented. An authorization letter is necessary from the authorized person on letter head, if original receipt is misplaced.\nThe equipment must be collected within 15 days after repair or not repair from the receipt date-in any condition, otherwise the company will have the right to dispose off your equipment at any price to recover the repair and other cost from proceeds.\nReasonable care will be taken of the equipment received for repair. However, the company is not liable for any loss or damage arised from accidents, fir, theft, riots or causes beyond our control\nWhile company will make every effort to carry out repairs as earlier as possible and it is expressly made cleat that the company shall not be liable to do so within any specified time or period. Average time taking to repair is 24 hours.",
+   "fetch_from": "terms.terms_and_conditions",
+   "fetch_if_empty": 1,
+   "fieldname": "terms_and_conditions",
+   "fieldtype": "Text Editor",
+   "label": "Terms and Conditions"
   }
  ],
  "icon": "fa fa-bug",
  "links": [],
- "modified": "2024-01-02 18:00:43.490003",
+ "modified": "2024-01-08 13:39:30.353723",
  "modified_by": "Administrator",
  "module": "MicroTouch-ERPNext-App",
  "name": "Product Service",
