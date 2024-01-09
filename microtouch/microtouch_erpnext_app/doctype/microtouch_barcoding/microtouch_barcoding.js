@@ -12,7 +12,7 @@ frappe.ui.form.on("microtouch barcoding", {
                 method: 'frappe.client.get',
                 args: {
                     doctype: 'Item',
-                    name: frm.doc.custom_product_name // Replace with the method to get the target item name
+                    name: frm.doc.product_name // Replace with the method to get the target item name
                 },
                 callback: function(r) {
                     if (r && r.message) {
