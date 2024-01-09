@@ -121,8 +121,30 @@ fixtures = [
     {
         'dt':'Property Setter',
         'filters':[['doc_type','=','Item']]
+    },
+    {
+        'dt': 'Property Setter',
+        'filters':[['doc_type','=','Lead']]
+    },
+    {
+        "dt": "Client Script", "filters": [["dt", "=", "Lead"]]
+    },
+    {
+        'dt': 'Custom Field',
+        'filters':[['dt', '=','Lead']]
+    },
+    {
+        'dt': 'Property Setter', 
+        'filters':[['name','in',['Notification-channel-options']]]
     }
+
 ]
+doctype_js = {
+    'Notification': 'public/js/notification.js'
+}
+override_doctype_class = {
+    	"Notification": "microtouch.overrides.notification.ERPGulfNotification"
+}
 
 # Document Events
 # ---------------
