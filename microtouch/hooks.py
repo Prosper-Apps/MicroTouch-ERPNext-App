@@ -136,7 +136,24 @@ fixtures = [
     {
         'dt': 'Property Setter', 
         'filters':[['name','in',['Notification-channel-options']]]
-    }
+    },
+    {
+        'dt':'Property Setter',
+        'filters':[['name', 'in',['Lead-customer-hidden']]]
+    },
+    {
+  "dt": "DocField",
+  "filters": [
+    ["fieldname", "like", "Lead-%"]
+  ]
+},
+{
+  "dt": "DocType",
+  "filters": [
+    ["name", "like", "Lead-%"]
+  ]
+}
+
 
 ]
 doctype_js = {
