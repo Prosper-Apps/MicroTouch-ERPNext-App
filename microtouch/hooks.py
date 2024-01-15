@@ -144,6 +144,10 @@ fixtures = [
     {
         'dt':'Property Setter',
         'filters':[['doctype_or_field','=',['DocField','DocType']],['doc_type','=','Lead']]
+    },
+    {
+        'dt':'Print Format',
+        'filters':[['module','=','MicroTouch-ERPNext-App']]
     }
 ]
 doctype_js = {
