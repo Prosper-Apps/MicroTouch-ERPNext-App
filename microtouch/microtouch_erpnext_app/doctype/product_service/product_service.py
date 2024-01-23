@@ -7,7 +7,9 @@ from erpnext.support.doctype.warranty_claim.warranty_claim import WarrantyClaim
 import json
 
 class ProductService(Document):
-	pass
+	def before_save(self):
+		frappe.msgprint('Testing bench restart is working or not')
+
 @frappe.whitelist()
 def make_sales_invoice(product_data):
 	json_product_data = json.loads(product_data)
