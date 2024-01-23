@@ -7,13 +7,13 @@ function check_warranty(frm) {
 		frm.set_value('min_service_charge',350)
 	}
 }
-function calulate_total(frm, cdt, cdn){
+function calculate_total(frm, cdt, cdn){
 	let child = locals[cdt][cdn]
 	let total_price = child.quantity * child.price
 	frappe.model.set_value(cdt,cdn,'total',total_price)
 }
-function calling_calulate_total(frm, cdt,cdn){
-	calulate_total(frm,cdt,cdn)
+function calling_calculate_total(frm, cdt,cdn){
+	calculate_total(frm,cdt,cdn)
 	frm.compute_total(frm)
 }
 function on_remove_cal_total (frm,cdt,cdn){
@@ -83,9 +83,9 @@ frappe.ui.form.on("Product Service", {
 	discount_on_amount: on_discount_amount_cal_total
 });
 frappe.ui.form.on('Spares Parts',{
-	quantity:calling_calulate_total,
-	item_code:calling_calulate_total,
-	price:calling_calulate_total,
+	quantity:calling_calculate_total,
+	item_code:calling_calculate_total,
+	price:calling_calculate_total,
 	costing_table_remove:on_remove_cal_total
 })
 
