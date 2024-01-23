@@ -42,7 +42,7 @@ class ERPGulfNotification(Notification):
         }
     headers = {'content-type': 'application/x-www-form-urlencoded'} 
     try:
-      time.sleep(10)
+      time.sleep(1)
       response = requests.post(document_url, data=payload, headers=headers)
       if response.status_code == 200:
           response_json = response.json()
@@ -85,7 +85,7 @@ class ERPGulfNotification(Notification):
     print(f'\n\n\n\n\n\n\n To number is {number} \n\n\n\n\n\n\n')
     headers = {'content-type': 'application/x-www-form-urlencoded'}
     try:
-        time.sleep(10)
+        time.sleep(1)
         response = requests.post(message_url, data=payload, headers=headers)
       # when the msg send is success then its details are stored into ultramsg_4_ERPNext log  
         if response.status_code == 200:

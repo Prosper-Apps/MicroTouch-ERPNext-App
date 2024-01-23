@@ -40,8 +40,10 @@
   "section_break_t1st",
   "min_service_charge",
   "discount",
+  "sub_total",
   "column_break_mrtc",
   "spare_part_total",
+  "discount_on_amount",
   "total_charges",
   "_section",
   "terms_and_conditions"
@@ -262,7 +264,8 @@
   {
    "fieldname": "spare_part_total",
    "fieldtype": "Currency",
-   "label": "Spare Part Total"
+   "label": "Spare Part Total",
+   "read_only": 1
   },
   {
    "default": "350",
@@ -284,7 +287,8 @@
    "depends_on": "eval:doc.warranty_status=='Under Warranty'\n",
    "fieldname": "complaint_id",
    "fieldtype": "Data",
-   "label": "Complaint ID"
+   "label": "Complaint ID",
+   "mandatory_depends_on": "doc.warranty_status=='Under Warranty'"
   },
   {
    "columns": 5,
@@ -311,11 +315,23 @@
    "fieldname": "terms_and_conditions",
    "fieldtype": "Text Editor",
    "label": "Terms and Conditions"
+  },
+  {
+   "default": "0",
+   "fieldname": "discount_on_amount",
+   "fieldtype": "Currency",
+   "label": "Discount on Amount"
+  },
+  {
+   "fieldname": "sub_total",
+   "fieldtype": "Currency",
+   "label": "Sub Total",
+   "read_only": 1
   }
  ],
  "icon": "fa fa-bug",
  "links": [],
- "modified": "2024-01-08 13:39:30.353723",
+ "modified": "2024-01-23 13:13:48.126526",
  "modified_by": "Administrator",
  "module": "MicroTouch-ERPNext-App",
  "name": "Product Service",

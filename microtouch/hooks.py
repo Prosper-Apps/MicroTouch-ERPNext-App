@@ -130,8 +130,10 @@ fixtures = [
         "dt": "Client Script", "filters": [["dt", "=", "Lead"]]
     },
     {
-        'dt': 'Custom Field',
-        'filters':[['dt', '=','Lead']]
+        "dt": "Print Format", "filters": [["module","=","MicroTouch-ERPNext-App"]]
+    },
+    {
+        'dt': 'Custom Field','filters':[['dt', '=','Lead']]
     },
     {
         'dt': 'Property Setter', 
