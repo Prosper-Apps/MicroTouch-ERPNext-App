@@ -8,6 +8,8 @@
  "document_type": "Setup",
  "engine": "InnoDB",
  "field_order": [
+  "date",
+  "column_break_svdd",
   "naming_series",
   "contact_info",
   "customer_name",
@@ -30,6 +32,9 @@
   "turnaround_time_in_hours",
   "section_break_7",
   "product_issue",
+  "column_break_djpo",
+  "accessories_taken",
+  "product_image",
   "resolution_section_and_charges",
   "resolution_date",
   "column_break_oaps",
@@ -46,7 +51,7 @@
   "discount_on_amount",
   "total_charges",
   "_section",
-  "terms_and_conditions"
+  "amended_from"
  ],
  "fields": [
   {
@@ -61,18 +66,20 @@
    "set_only_once": 1
   },
   {
+   "columns": 1,
    "default": "Open",
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_filter": 1,
+   "in_global_search": 1,
    "in_list_view": 1,
+   "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Status",
-   "no_copy": 1,
    "oldfieldname": "status",
    "oldfieldtype": "Select",
    "options": "\nOpen\nAssigned to Engineer\nWork In Progress\nCancelled by Customer\nCancelled by Engineer\nCompleted",
-   "reqd": 1,
-   "search_index": 1
+   "reqd": 1
   },
   {
    "fieldname": "section_break_7",
@@ -309,14 +316,6 @@
    "label": " "
   },
   {
-   "default": "Repair charges listed are only service charges. Cost of the components replaced will be extra.\nIf components cost exceeds service charges that means, total including components cost exceeding double the service charges of the respective item, then only we can give you the estimate for your approval. Otherwise equipment will be repaired. The estimate is approximate and the actual repair charges may differ from the estimate.\nIf estimate is not approved, customer has to pay 100% service charges. If not repaired because of the non availability of parts or any other reason we won't charge.\nWe will show you the functionality of the repaired items in our office while you taking back, for your satisfaction.\nOnce delivered the Material after repairs will not carry any warranty on parts and service\nDefective parts are not preserved after repairs, hence these will not be returned to customer.\nPayment should be made against the delivery of the Material.\nThe original receipt must be produced while taking delivery of the equipment. Delivery may be refused if original receipt is not presented. An authorization letter is necessary from the authorized person on letter head, if original receipt is misplaced.\nThe equipment must be collected within 15 days after repair or not repair from the receipt date-in any condition, otherwise the company will have the right to dispose off your equipment at any price to recover the repair and other cost from proceeds.\nReasonable care will be taken of the equipment received for repair. However, the company is not liable for any loss or damage arised from accidents, fir, theft, riots or causes beyond our control\nWhile company will make every effort to carry out repairs as earlier as possible and it is expressly made cleat that the company shall not be liable to do so within any specified time or period. Average time taking to repair is 24 hours.",
-   "fetch_from": "terms.terms_and_conditions",
-   "fetch_if_empty": 1,
-   "fieldname": "terms_and_conditions",
-   "fieldtype": "Text Editor",
-   "label": "Terms and Conditions"
-  },
-  {
    "default": "0",
    "fieldname": "discount_on_amount",
    "fieldtype": "Currency",
@@ -327,11 +326,49 @@
    "fieldtype": "Currency",
    "label": "Sub Total",
    "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Product Service",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_svdd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_djpo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "fieldname": "accessories_taken",
+   "fieldtype": "Table",
+   "label": "Accessories Taken",
+   "options": "Accessories Taken"
+  },
+  {
+   "fieldname": "product_image",
+   "fieldtype": "Table",
+   "label": "Product Image",
+   "options": "Product Images"
   }
  ],
  "icon": "fa fa-bug",
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-01-23 13:13:48.126526",
+ "modified": "2024-01-24 16:19:08.151078",
  "modified_by": "Administrator",
  "module": "MicroTouch-ERPNext-App",
  "name": "Product Service",

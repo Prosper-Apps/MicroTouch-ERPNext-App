@@ -1,0 +1,106 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-24 13:46:49.562472",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ujas",
+  "amended_from",
+  "status",
+  "attach_image_lbvj"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ujas",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Testi",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nDraft\nCancelled\nSubmitted\nOpen\nAssigned to Engineer\nWork In Progress\nCancelled by Customer\nCancelled by Engineer\nCompleted"
+  },
+  {
+   "fieldname": "attach_image_lbvj",
+   "fieldtype": "Attach"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-24 14:02:54.069049",
+ "modified_by": "Administrator",
+ "module": "MicroTouch-ERPNext-App",
+ "name": "Testi",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Blue",
+   "title": "Draft"
+  },
+  {
+   "color": "Orange",
+   "title": "Cancelled"
+  },
+  {
+   "color": "Gray",
+   "title": "Submitted"
+  },
+  {
+   "color": "Cyan",
+   "title": "Open"
+  },
+  {
+   "color": "Pink",
+   "title": "Assigned to Engineer"
+  },
+  {
+   "color": "Light Blue",
+   "title": "Work In Progress "
+  },
+  {
+   "color": "Purple",
+   "title": "Cancelled by Customer "
+  },
+  {
+   "color": "Red",
+   "title": "Cancelled by Engineer"
+  },
+  {
+   "color": "Green",
+   "title": "Completed"
+  }
+ ]
+}

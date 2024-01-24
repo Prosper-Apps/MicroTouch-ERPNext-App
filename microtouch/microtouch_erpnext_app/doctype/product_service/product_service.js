@@ -1,6 +1,7 @@
 function check_warranty(frm) {
 	if (frm.doc.warranty_status === 'Under Warranty') {
 		frm.set_value('min_service_charge', 0);
+		frm.set_value('sub_total',0)
 		frm.set_value('total_charges',0)
 	}
 	else{

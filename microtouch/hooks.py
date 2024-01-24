@@ -150,6 +150,10 @@ fixtures = [
     {
         'dt':'Print Format',
         'filters':[['module','=','MicroTouch-ERPNext-App']]
+    },
+    {
+        'dt':'Letter Head',
+        'filters':[['name','=','MT-Letter Head']]
     }
 ]
 doctype_js = {
