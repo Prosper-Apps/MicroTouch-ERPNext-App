@@ -1,0 +1,92 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "question-sign",
+  "modified": "2024-02-12 15:28:08.781557",
+  "name": "Pending",
+  "style": "",
+  "workflow_state_name": "Pending"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "ok-sign",
+  "modified": "2024-02-12 15:28:08.783366",
+  "name": "Approved",
+  "style": "Success",
+  "workflow_state_name": "Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "remove",
+  "modified": "2024-02-12 15:28:08.785364",
+  "name": "Rejected",
+  "style": "Danger",
+  "workflow_state_name": "Rejected"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-02-12 17:40:25.183100",
+  "name": "Cancelled By Customer",
+  "style": "Danger",
+  "workflow_state_name": "Cancelled By Customer"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-02-12 17:40:39.653532",
+  "name": "Cancelled By Engineer",
+  "style": "Inverse",
+  "workflow_state_name": "Cancelled By Engineer"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-02-12 17:34:34.806065",
+  "name": "Completed",
+  "style": "Success",
+  "workflow_state_name": "Completed"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-02-12 17:38:22.108931",
+  "name": "Open",
+  "style": "Info",
+  "workflow_state_name": "Open"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-02-12 17:50:50.285556",
+  "name": "Waiting For Spare Part",
+  "style": "Primary",
+  "workflow_state_name": "Waiting For Spare Part"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-02-12 17:50:16.701895",
+  "name": "Assign To Engineer",
+  "style": "",
+  "workflow_state_name": "Assign To Engineer"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-02-12 17:40:12.095587",
+  "name": "Work in Progress",
+  "style": "Warning",
+  "workflow_state_name": "Work in Progress"
+ }
+]

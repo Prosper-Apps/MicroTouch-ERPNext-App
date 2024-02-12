@@ -167,6 +167,9 @@ fixtures = [
     {
         'dt':'Workflow',
         'filters':[['name','in',['Product Service Workflow']]]
+    },
+    {
+        'dt':'Workflow State'
     }
 ]
 doctype_js = {
