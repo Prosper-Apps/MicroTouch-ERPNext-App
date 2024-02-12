@@ -163,6 +163,10 @@ fixtures = [
     {
         'dt':'Letter Head',
         'filters':[['name','=','MT-Letter Head']]
+    },
+    {
+        'dt':'Workflow',
+        'filters':[['name','in',['Product Service Workflow']]]
     }
 ]
 doctype_js = {
