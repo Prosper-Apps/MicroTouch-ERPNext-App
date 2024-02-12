@@ -127,6 +127,15 @@ fixtures = [
         'filters':[['doc_type','=','Lead']]
     },
     {
+        "dt": "Property Setter",
+        "filters": [
+            ["doctype_or_field", "=", "DocField"],
+            ["doc_type", "=", "Notification"],
+            ["field_name", "=", "channel"],
+            ["module", "=", "MicroTouch-ERPNext-App"]
+        ]
+    },
+    {
         "dt": "Client Script", "filters": [["dt", "=", "Lead"]]
     },
     {
