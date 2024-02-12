@@ -44,12 +44,11 @@
   "costing_table",
   "section_break_t1st",
   "min_service_charge",
-  "discount",
   "sub_total",
+  "total_charges",
   "column_break_mrtc",
   "spare_part_total",
   "discount_on_amount",
-  "total_charges",
   "_section",
   "amended_from"
  ],
@@ -78,7 +77,7 @@
    "label": "Status",
    "oldfieldname": "status",
    "oldfieldtype": "Select",
-   "options": "\nOpen\nAssigned to Engineer\nWork In Progress\nCancelled by Customer\nCancelled by Engineer\nCompleted",
+   "options": "Open\nAssigned to Engineer\nWork in Progress\nWaiting for Spare Part\nCancelled by Customer\nCancelled by Engineer\nCompleted",
    "reqd": 1
   },
   {
@@ -262,13 +261,6 @@
    "read_only": 1
   },
   {
-   "default": "0",
-   "fieldname": "discount",
-   "fieldtype": "Percent",
-   "label": "Discount",
-   "precision": "0"
-  },
-  {
    "fieldname": "spare_part_total",
    "fieldtype": "Currency",
    "label": "Spare Part Total",
@@ -279,8 +271,7 @@
    "fieldname": "min_service_charge",
    "fieldtype": "Currency",
    "label": "Min Service Charge",
-   "precision": "2",
-   "read_only": 1
+   "precision": "2"
   },
   {
    "fieldname": "section_break_t1st",
@@ -291,11 +282,11 @@
    "fieldtype": "Column Break"
   },
   {
-   "depends_on": "eval:doc.warranty_status=='Under Warranty'\n",
+   "depends_on": "eval:doc.warranty_status=='Under Warranty';\n",
    "fieldname": "complaint_id",
    "fieldtype": "Data",
    "label": "Complaint ID",
-   "mandatory_depends_on": "doc.warranty_status=='Under Warranty'"
+   "mandatory_depends_on": "eval:doc.warranty_status=='Under Warranty';\n"
   },
   {
    "columns": 5,
@@ -322,6 +313,7 @@
    "label": "Discount on Amount"
   },
   {
+   "default": "0",
    "fieldname": "sub_total",
    "fieldtype": "Currency",
    "label": "Sub Total",
@@ -368,7 +360,7 @@
  "icon": "fa fa-bug",
  "is_submittable": 1,
  "links": [],
- "modified": "2024-01-24 16:19:08.151078",
+ "modified": "2024-02-12 18:09:08.032409",
  "modified_by": "Administrator",
  "module": "MicroTouch-ERPNext-App",
  "name": "Product Service",
