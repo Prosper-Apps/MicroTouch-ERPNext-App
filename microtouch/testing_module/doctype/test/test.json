@@ -6,6 +6,7 @@
  "engine": "InnoDB",
  "field_order": [
   "product",
+  "phone",
   "amended_from"
  ],
  "fields": [
@@ -23,12 +24,18 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "options": "Phone"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-02-12 17:12:16.876222",
+ "modified": "2024-02-13 11:16:16.497323",
  "modified_by": "Administrator",
  "module": "Testing Module",
  "name": "Test",
