@@ -57,15 +57,6 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2024-02-12 17:38:22.108931",
-  "name": "Open",
-  "style": "Info",
-  "workflow_state_name": "Open"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
   "modified": "2024-02-12 17:50:50.285556",
   "name": "Waiting For Spare Part",
   "style": "Primary",
@@ -88,5 +79,14 @@
   "name": "Work in Progress",
   "style": "Warning",
   "workflow_state_name": "Work in Progress"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-02-12 17:38:22.108931",
+  "name": "Open",
+  "style": "Info",
+  "workflow_state_name": "Open"
  }
 ]

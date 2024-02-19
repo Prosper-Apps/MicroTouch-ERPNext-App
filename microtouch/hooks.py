@@ -171,10 +171,14 @@ fixtures = [
     {
         'dt':'Workflow State'
     },
-      {
+    {
         'dt':'Print Format',
         'filters':[['name','=','MT - Product Issues']]
     },
+    {
+        'dt':'Print Format',
+        'filters':[['name','=','MT - Proudct Service Bill']]
+    }
 ]
 doctype_js = {
     'Notification': 'public/js/notification.js'
