@@ -178,7 +178,8 @@ fixtures = [
     {
         'dt':'Print Format',
         'filters':[['name','=','MT - Proudct Service Bill']]
-    }
+    },
+    {'dt':'Property Setter'}
 ]
 doctype_js = {
     'Notification': 'public/js/notification.js'
