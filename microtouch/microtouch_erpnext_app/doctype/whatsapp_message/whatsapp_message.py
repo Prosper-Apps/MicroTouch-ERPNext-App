@@ -6,21 +6,20 @@ import frappe
 import requests
 import frappe
 from frappe.model.document import Document
-class whatsappmessage(Document):  
- @frappe.whitelist()
- def msg(self,token, recipient,message_url,):
+class whatsappmessage(Document):
+	@frappe.whitelist()
+	def msg(self,token, recipient,message_url,):
 #    message_url=message_url
-   payload = {
-        'token': token,
-        'to': recipient,
-        'body':"This message is for testing",
-       }
-    
-   headers = {'content-type': 'application/x-www-form-urlencoded'}
-
-   try:
-           response = requests.post(message_url, data=payload, headers=headers)
-           return response.text
-   except Exception as e:
-          return e
+		payload = {
+	     'token': token,
+	     'to': recipient,
+	     'body':"This message is for testing",
+	    }
+	
+		headers = {'content-type': 'application/x-www-form-urlencoded'}	
+		try:
+			response = requests.post(message_url, data=payload, headers=headers)
+			return response.text
+		except Exception as e:
+			return e
    
