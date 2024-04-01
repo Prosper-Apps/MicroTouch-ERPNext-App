@@ -11,6 +11,7 @@ import time
 from frappe import enqueue
 # to send whatsapp message and document using ultramsg
 class ERPGulfNotification(Notification):
+ 
  #to create pdf
   def create_pdf(self,doc):
     file = frappe.get_print(doc.doctype, doc.name, self.print_format, as_pdf=True)
@@ -112,14 +113,15 @@ class ERPGulfNotification(Notification):
 # directly pass the function 
   # call the  send whatsapp with pdf function and send whatsapp without pdf function and it work with the help of condition 
   def send(self, doc):
-
+    # frappe.msgprint('send method calling')
+    print('\n\n\n\n\n\n\n send method called \n\n\n\n\n\n\n')
     context = {"doc":doc, "alert": self, "comments": None}
     if doc.get("_comments"):
         context["comments"] = json.loads(doc.get("_comments"))
     if self.is_standard:
         self.load_standard_properties(context)      
     try:
-      if self.channel == "whatsapp message":
+      if self.channel == "WhatsApp Messages":
         # if attach_print and print format both are working then it send pdf with message
         if self.attach_print or  self.print_format:
           frappe.enqueue(

@@ -1,0 +1,29 @@
+{
+ "attach_print": 1,
+ "channel": "WhatsApp Messages",
+ "condition": "doc.status==\"Open\"",
+ "creation": "2024-03-30 16:08:23.141155",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Product Service",
+ "enabled": 1,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Hii {{ doc.customer_name }} please find the service bill",
+ "modified": "2024-03-30 16:08:23.141155",
+ "modified_by": "Administrator",
+ "module": "MicroTouch-ERPNext-App",
+ "name": "Product Service 1",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "mobile_no",
+   "receiver_by_role": "All"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "value_changed": "workflow_state"
+}
