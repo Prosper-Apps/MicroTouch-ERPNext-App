@@ -34,6 +34,8 @@ class ERPGulfNotification(Notification):
       multiple_numbers.append(number)
     add_multiple_numbers_to_url=','.join(multiple_numbers) 
     document_url= frappe.get_doc('whatsapp message').get('url')
+    print(f'\n\n\n\n\n\n\n doucument url is {document_url}\n\n\n\n\n\n\n')
+
     payload = {
       'token': token,
       'to':add_multiple_numbers_to_url,
@@ -122,8 +124,10 @@ class ERPGulfNotification(Notification):
         self.load_standard_properties(context)      
     try:
       if self.channel == "WhatsApp Messages":
+        print('\n\n\n\n\n\n\n WhatsApp Messages  \n\n\n\n\n\n\n')
         # if attach_print and print format both are working then it send pdf with message
         if self.attach_print or  self.print_format:
+          print('\n\n\n\n\n\n\n with PDF  \n\n\n\n\n\n\n')
           frappe.enqueue(
             self.send_whatsapp_with_pdf(doc, context),
             queue="short",
@@ -133,6 +137,7 @@ class ERPGulfNotification(Notification):
             )
                # otherwise send only message   
         else:
+          print('\n\n\n\n\n\n\n with out PDF  \n\n\n\n\n\n\n')
           frappe.enqueue(
           self.send_whatsapp_without_pdf(doc, context),
           queue="short",
