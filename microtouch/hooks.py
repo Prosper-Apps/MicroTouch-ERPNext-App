@@ -183,6 +183,10 @@ fixtures = [
         'dt':'Print Format',
         'filters':[['name','=','MT - Proudct Service Bill']]
     },
+        {
+        'dt':'Notification',
+        'filters':[['document_type','=','Product Service']]
+    },
     {'dt':'Property Setter'}
 ]
 doctype_js = {
