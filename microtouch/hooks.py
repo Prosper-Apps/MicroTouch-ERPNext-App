@@ -187,7 +187,16 @@ fixtures = [
         'dt':'Notification',
         'filters':[['document_type','=','Product Service']]
     },
-    {'dt':'Property Setter'}
+    {'dt':'Property Setter'},
+    {
+        'dt':'Print Format',
+        'filters':[['name','=','MT - Product Service Token']]
+    },
+       {
+        'dt':'Print Format',
+        'filters':[['name','=','MT Product Service Invoice']]
+    },
+
 ]
 doctype_js = {
     'Notification': 'public/js/notification.js'
