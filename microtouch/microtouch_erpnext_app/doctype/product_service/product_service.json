@@ -20,7 +20,7 @@
   "contact_email",
   "status",
   "engineer_to_be_assigned",
-  "engineer_name",
+  "engineer_number",
   "product_and_warranty_details",
   "product",
   "warranty_status",
@@ -209,13 +209,6 @@
    "options": "Employee"
   },
   {
-   "fetch_from": "engineer_to_be_assigned.employee_name",
-   "fetch_if_empty": 1,
-   "fieldname": "engineer_name",
-   "fieldtype": "Data",
-   "label": "Engineer Name"
-  },
-  {
    "default": "Today",
    "fieldname": "turnaround_date",
    "fieldtype": "Date",
@@ -355,12 +348,19 @@
    "fieldtype": "Table",
    "label": "Product Image",
    "options": "Product Images"
+  },
+  {
+   "fetch_from": "engineer_to_be_assigned.cell_number",
+   "fetch_if_empty": 1,
+   "fieldname": "engineer_number",
+   "fieldtype": "Data",
+   "label": "Engineer Number"
   }
  ],
  "icon": "fa fa-bug",
  "is_submittable": 1,
  "links": [],
- "modified": "2024-02-12 18:09:08.032409",
+ "modified": "2024-05-30 17:58:33.516435",
  "modified_by": "Administrator",
  "module": "MicroTouch-ERPNext-App",
  "name": "Product Service",
