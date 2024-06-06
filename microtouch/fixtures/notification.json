@@ -2,20 +2,20 @@
  {
   "attach_print": 1,
   "channel": "WhatsApp Messages",
-  "condition": "doc.status == \"Open\"",
+  "condition": "doc.workflow_state == \"Reciept Sent to Customer and Product Assigned to Engineer\"\n",
   "date_changed": null,
   "days_in_advance": 0,
   "docstatus": 0,
   "doctype": "Notification",
   "document_type": "Product Service",
   "enabled": 1,
-  "event": "Save",
+  "event": "Value Change",
   "is_standard": 0,
   "message": "Hi {{ doc.customer_name }}\nWe have taken your {{ doc.product }} for service  and issues are {{ doc.product_issue | striptags }}.\n\nPlease find the below receipt\n\nThanks for using MicroTouch Services\n",
   "method": null,
-  "modified": "2024-04-06 16:48:10.562265",
+  "modified": "2024-06-06 11:31:10.605204",
   "module": null,
-  "name": "Product Service 1",
+  "name": "Send WhatsApp Message To Engineer",
   "print_format": "MT - Product Issues",
   "property_value": null,
   "recipients": [
@@ -23,10 +23,10 @@
     "bcc": null,
     "cc": null,
     "condition": null,
-    "parent": "Product Service 1",
+    "parent": "Send WhatsApp Message To Engineer",
     "parentfield": "recipients",
     "parenttype": "Notification",
-    "receiver_by_document_field": "mobile_no",
+    "receiver_by_document_field": "engineer_number",
     "receiver_by_role": null
    }
   ],
@@ -37,46 +37,6 @@
   "set_property_after_alert": null,
   "slack_webhook_url": null,
   "subject": null,
-  "value_changed": null
- },
- {
-  "attach_print": 1,
-  "channel": "WhatsApp Messages",
-  "condition": "doc.status == \"Cancelled by Customer\" or doc.status == \"Cancelled by Engineer\" or doc.status == \"Completed\"",
-  "date_changed": null,
-  "days_in_advance": 0,
-  "docstatus": 0,
-  "doctype": "Notification",
-  "document_type": "Product Service",
-  "enabled": 1,
-  "event": "Submit",
-  "is_standard": 0,
-  "message": "Hi {{ doc.customer_name }}\nYour status of your {{ doc.product }} is\n{% if doc.status == \"Completed\" %}\ncompleted, please find service bill below.\n{% elif doc.status == \"Cancelled by Engineer\" %}\nis cancelled by our engineer due to some reasons.\n{% elif doc.status == \"Cancelled by Customer\" %}\nis cancelled by your side.\n{% endif %}\nThanks for using our services.\n",
-  "method": null,
-  "modified": "2024-04-06 16:49:18.379599",
-  "module": null,
-  "name": "Product service 2",
-  "print_format": "MT - Proudct Service Bill",
-  "property_value": null,
-  "recipients": [
-   {
-    "bcc": null,
-    "cc": null,
-    "condition": null,
-    "parent": "Product service 2",
-    "parentfield": "recipients",
-    "parenttype": "Notification",
-    "receiver_by_document_field": "mobile_no",
-    "receiver_by_role": null
-   }
-  ],
-  "send_system_notification": 0,
-  "send_to_all_assignees": 0,
-  "sender": null,
-  "sender_email": null,
-  "set_property_after_alert": null,
-  "slack_webhook_url": null,
-  "subject": null,
-  "value_changed": null
+  "value_changed": "workflow_state"
  }
 ]

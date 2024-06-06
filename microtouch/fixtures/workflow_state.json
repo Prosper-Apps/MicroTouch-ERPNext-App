@@ -48,15 +48,6 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2024-02-12 17:50:50.285556",
-  "name": "Waiting For Spare Part",
-  "style": "Primary",
-  "workflow_state_name": "Waiting For Spare Part"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
   "modified": "2024-02-12 17:34:34.806065",
   "name": "Completed",
   "style": "Success",
@@ -66,10 +57,28 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
+  "modified": "2024-02-12 17:50:50.285556",
+  "name": "Waiting For Spare Part",
+  "style": "Primary",
+  "workflow_state_name": "Waiting For Spare Part"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
   "modified": "2024-02-12 17:50:16.701895",
   "name": "Assign To Engineer",
   "style": "",
   "workflow_state_name": "Assign To Engineer"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-05-30 17:46:28.722522",
+  "name": "Reciept Sent to Customer and Product Assigned to Engineer",
+  "style": "",
+  "workflow_state_name": "Reciept Sent to Customer and Product Assigned to Engineer"
  },
  {
   "docstatus": 0,

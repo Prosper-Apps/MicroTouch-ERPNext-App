@@ -354,13 +354,14 @@
    "fetch_if_empty": 1,
    "fieldname": "engineer_number",
    "fieldtype": "Data",
-   "label": "Engineer Number"
+   "label": "Engineer Number",
+   "options": "Phone"
   }
  ],
  "icon": "fa fa-bug",
  "is_submittable": 1,
  "links": [],
- "modified": "2024-05-30 17:58:33.516435",
+ "modified": "2024-06-06 11:30:14.730135",
  "modified_by": "Administrator",
  "module": "MicroTouch-ERPNext-App",
  "name": "Product Service",
