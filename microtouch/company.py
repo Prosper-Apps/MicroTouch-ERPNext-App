@@ -1,6 +1,6 @@
 import frappe
 from frappe.utils.background_jobs import get_job
-
+@frappe.whitelist()
 def is_deletion_job_running(company):
     job_id = generate_id_for_deletion_job(company)
     job = get_job(job_id)
