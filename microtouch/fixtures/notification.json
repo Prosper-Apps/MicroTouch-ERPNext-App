@@ -11,11 +11,11 @@
   "enabled": 1,
   "event": "Value Change",
   "is_standard": 0,
-  "message": "Hi {{ doc.customer_name }}\nWe have taken your {{ doc.product }} for service  and issues are {{ doc.product_issue | striptags }}.\n\nPlease find the below receipt\n\nThanks for using MicroTouch Services\n",
+  "message": "Hi {{ doc.engineer_to_be_assigned }}! A new product {{ doc.product }} with {{ doc.name }} has been assigned to you. \nProduct Issues are: {{ doc.product_issue | striptags }}. \n{% if doc.turnaround_time_in_hours %} \nYou have to complete this within {{ doc.turnaround_time_in_hours | int / 3600 }} hours. \n{% else %} You have to complete the service by {{ doc.turnaround_date }}. \n{% endif %} ",
   "method": null,
-  "modified": "2024-06-06 11:31:10.605204",
+  "modified": "2024-06-06 14:21:39.597220",
   "module": null,
-  "name": "Send WhatsApp Message To Engineer",
+  "name": "Send WhatsApp Message To Service Engineer",
   "print_format": "MT - Product Issues",
   "property_value": null,
   "recipients": [
@@ -23,7 +23,7 @@
     "bcc": null,
     "cc": null,
     "condition": null,
-    "parent": "Send WhatsApp Message To Engineer",
+    "parent": "Send WhatsApp Message To Service Engineer",
     "parentfield": "recipients",
     "parenttype": "Notification",
     "receiver_by_document_field": "engineer_number",
@@ -36,7 +36,7 @@
   "sender_email": null,
   "set_property_after_alert": null,
   "slack_webhook_url": null,
-  "subject": null,
+  "subject": "Send WhatsApp Message To Service Engineer",
   "value_changed": "workflow_state"
  }
 ]

@@ -196,14 +196,10 @@ fixtures = [
         'dt':'Print Format',
         'filters':[['name','=','MT Product Service Invoice']]
     },
-    {
+       {
         'dt':'Notification',
-        'filters':[['name','=','Send WhatsApp Message To Engineer']]
-    },
-    #    {
-    #     'dt':'Notification',
-    #     'filters':[['name','=','Send WhatsApp Message To Engineer']]
-    # }
+        'filters':[['name','=','Send WhatsApp Message To Service Engineer']]
+    }
 ]
 doctype_js = {
     'Notification': 'public/js/notification.js'
