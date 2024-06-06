@@ -256,6 +256,10 @@ override_doctype_class = {
 # override_whitelisted_methods = {
 # 	"frappe.desk.doctype.event.event.get_events": "microtouch.event.get_events"
 # }
+override_whitelisted_methods = {
+	"erpnext.setup.doctype.company.company.is_deletion_job_running": "microtouch.microtouch.company.is_deletion_job_running"
+}
+# /home/st/frappe-virtual-env/mtouch-bench/apps/microtouch.microtouch.company.py
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
