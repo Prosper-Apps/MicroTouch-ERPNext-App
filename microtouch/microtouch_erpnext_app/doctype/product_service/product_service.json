@@ -206,7 +206,8 @@
    "fieldname": "engineer_to_be_assigned",
    "fieldtype": "Link",
    "label": "Engineer to be Assigned",
-   "options": "Employee"
+   "options": "Employee",
+   "reqd": 1
   },
   {
    "default": "Today",
@@ -361,7 +362,7 @@
  "icon": "fa fa-bug",
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-06 11:30:14.730135",
+ "modified": "2024-06-06 12:52:05.409939",
  "modified_by": "Administrator",
  "module": "MicroTouch-ERPNext-App",
  "name": "Product Service",
